@@ -1,4 +1,4 @@
-#!./yasl
+#!./yasl_linux_x64
 
 { print "\n" print } print_endl
 

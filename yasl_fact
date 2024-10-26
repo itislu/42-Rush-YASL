@@ -1,0 +1,36 @@
+#!./yasl_linux_x64
+
+{ = print "\n" print } print_endl
+
+{ = ! } move
+
+{
+	"0" %< move:2 !
+	"9" %> move:2 !
+	2:||
+} is_not_int
+
+{
+	"Error: Invalid input!" print_endl
+	1 exit
+} error
+
+!!
+# 1 != ? error
+is_not_int ? error
+
+eval
+= 0 < ? error
+
+{
+	= 1 > ? (
+		= 1 -
+		fact
+		*
+	)
+	= 0 < ? error
+} fact
+
+= 1 <= ? 1 : fact
+
+print_endl

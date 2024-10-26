@@ -7,15 +7,33 @@
 { = print } print_lossless
 
 {
-	"0" %< move:2 !
-	"9" %> move:2 !
-	2:||
-} is_not_int
-
-{
 	"Error: Invalid input!" print_endl
 	1 exit
 } error
+
+{
+	{
+		"0" %< move:2 !
+		"9" %> move:2 !
+		2:||
+	} is_not_int
+
+	0:3
+	[#] %? (
+		#(
+			3:=		// current index
+			%]#[	// current char
+			is_not_int ? error
+			!!
+			3:(= 1 +):3
+		)
+	) : error
+} check_number
+
+
+// 0: stack of params
+// 1: current repeats
+// 3: current index
 
 !!
 
@@ -24,7 +42,7 @@
 
 0:move:1
 
-1:( is_not_int ? error ):1
+1:check_number:1
 
 1:eval:1
 

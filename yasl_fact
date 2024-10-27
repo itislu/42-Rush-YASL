@@ -32,9 +32,7 @@
 !!
 # 1 != ? error
 check_number
-
 eval
-= 0 < ? error
 
 {
 	= 1 > ? (
@@ -45,6 +43,6 @@ eval
 	= 0 < ? error
 } fact
 
-= 1 <= ? 1 : fact
+= 0 == ? 1 : fact
 
 print_endl

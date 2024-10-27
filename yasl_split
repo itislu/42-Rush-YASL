@@ -11,7 +11,7 @@
 { "\n" + print } print_endl
 
 {
-	"Error: Invalid input!" print_endl
+	print_endl
 	1 exit
 } error
 
@@ -24,8 +24,8 @@
 
 !!
 
-# 2 != ? error
-[#] 1 > ? error
+# 2 != ? ("Error: Need exactly 2 parameters!" error)
+[#] 1 > ? ("Error: Separator cannot be more than 1 character!" error)
 
 0:move:1
 

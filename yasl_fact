@@ -33,6 +33,7 @@
 # 1 != ? ("Error: Need exactly 1 parameter!" error)
 check_number
 eval
+= 42 > ? ("Error: This factorial would overflow in YASL!" error)
 
 {
 	= 1 > ? (

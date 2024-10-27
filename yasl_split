@@ -8,7 +8,7 @@
 
 { = print } print_lossless
 
-{ print "\n" print } print_endl
+{ "\n" + print } print_endl
 
 {
 	"Error: Invalid input!" print_endl

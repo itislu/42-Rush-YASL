@@ -1,6 +1,6 @@
 #!./yasl_linux_x64
 
-{ print "\n" print } print_endl
+{ "\n" + print } print_endl
 
 !!
 

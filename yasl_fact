@@ -2,7 +2,7 @@
 
 { = ! } move
 
-{ "\n" + print } print_endl
+{ print "\n" print } print_endl
 
 {
 	print_endl

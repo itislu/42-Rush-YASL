@@ -66,11 +66,24 @@
 // 3: index
 // 4: RGB pixels
 // 5: groups of 4 base64 indeces (converted from input)
+// 6: RGB pixels - reversed from stack 4
 
 !!
 
-read
-0:move:1
+{
+	""
+	0:1
+	1 @ (
+		read
+		%? (
+			0:move:1 1:+:1
+			+
+			1
+		) : (!! 0)
+	)
+} read_input
+
+read_input
 
 // image
 // 0:-----

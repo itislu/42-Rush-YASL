@@ -9,7 +9,7 @@
 		print_lossless
 		# !^
 	)
-	"\n" print
+	"-----\n" print
 } print_stack_lossless
 
 { = ! } move
@@ -38,7 +38,7 @@
 			7:move
 		) : (
 			// not a square
-			error //? 3 excess chars are still allowed atm
+			error
 		) )
 	} find_square_root
 
@@ -222,26 +222,6 @@ read_input
 )
 
 print
-
-
-
-// "":4
-// 0:3
-// [#] %? (
-// 	#(
-// 		3:=		// current index
-// 		%]#[	// current char
-// 		move:4 4:+:4
-// 		// index
-// 		// 0:---
-// 		is_end_of_line ? ("\n":4 4:+:4)
-// 		3:(= 1 +):3
-// 	)
-// ) : error
-
-// 4:print
-
-
 
 
 // 3: index

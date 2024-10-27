@@ -92,6 +92,16 @@ read_input
 1:calc_side_len:1
 1:move:2
 
+
+"Image received, nb pixels : "
+2:= = * "" +
++ print_endl
+
+"Found square : "
+2:= "" +
++ print_endl
+
+
 {
 	{
 		"A" %>= move:2 !
